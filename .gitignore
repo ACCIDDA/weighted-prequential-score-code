@@ -1,0 +1,28 @@
+# R session artefacts
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+.Rprofile
+Rplots.pdf
+
+# renv: keep the lockfile, never the library
+renv/library/
+renv/staging/
+renv/local/
+renv/sandbox/
+
+# macOS
+.DS_Store
+
+# Generated figures and table. produce_all_figures.R recreates outputs/ on a
+# fresh clone, so only the empty folder is tracked.
+outputs/*
+!outputs/.gitkeep
+
+# stray top-level copy of a figure that also lives in outputs/
+figure_5_tradeoff.png
+
+# NOTE: modern_quantile_*.rds is deliberately NOT ignored. The FluSight hub is
+# live -- truth is revised weekly and late submissions appear retroactively --
+# so the cached pull is what makes these figures reproducible. See README.
