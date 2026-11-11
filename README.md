@@ -1,25 +1,23 @@
-# Weighted prequential scoring — figures
+# Weighted Prequential Score (WPS) Manuscript Figures
 
-Code to reproduce every figure and the summary table for the weighted
-prequential score (WPS) analysis of FluSight influenza hospitalisation
-forecasts.
+Code to reproduce figures for *Weighting the weeks that matter: entropic tilting for epidemic forecast evaluation*
 
-## Running
+## Producing Figures
 
 ```r
 source("produce_all_figures.R")
 ```
 
-One script produces everything. Outputs are written to `outputs/`:
+The script above produces everything. Figures are written to `outputs/` directory:
 
 | File | Content |
 |---|---|
-| `figure_1_intro.png` | Michigan 2023/2024, two models against the observed curve |
-| `figure_2_et_weights.pdf` | Alternative / uniform / ET weight distributions |
-| `figure_3_examples.png` | Alabama and Oklahoma illustrative rank changes |
-| `figure_4_rcrit_cdf.png` | Estimated CDFs of the critical emphasis ratio *R*<sub>crit</sub> |
-| `table_1_rcrit_summary.tex` | *R*<sub>crit</sub> summary, LaTeX booktabs |
-| `figure_5_tradeoff.png` | Improvement / penalty tradeoff across *W* |
+| `figure_1_intro.png` | Michigan 2023/2024 example |
+| `figure_2_et_weights.pdf` | ET weights |
+| `figure_3_examples.png` | Alabama and Oklahoma examples |
+| `figure_4_rcrit_cdf.png` | Estimated CDFs of the critical emphasis ratio *r*<sub>crit</sub> |
+| `table_1_rcrit_summary.tex` | *r*<sub>crit</sub> summary, LaTeX booktabs |
+| `figure_5_tradeoff.png` | Improvement / penalty tradeoff  |
 | `figure_6_weekly_score_panels.png` | Weekly contribution to the PS and WPS |
 | `figure_7_rank_slopegraph.png` | PS vs WPS rank slopegraph |
 
@@ -56,7 +54,7 @@ install.packages("hubData", repos = c("https://hubverse-org.r-universe.dev",
 
 ## Settings
 
-Set near the top of `produce_all_figures.R`:
+Important settings at the top of `produce_all_figures.R`:
 
 | Constant | Value | Meaning |
 |---|---|---|
